@@ -1,6 +1,5 @@
 from django.test import TestCase
 from django.shortcuts import resolve_url as r
-from unittest import skip
 
 from eventex.core.models import Talk, Speaker
 
