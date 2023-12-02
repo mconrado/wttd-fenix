@@ -47,6 +47,11 @@ class SubscriptionFormTest(TestCase):
         exception = errors_list[0]
         self.assertEqual(code, exception.code)
 
+    def assertFormErrorMessage(self, form, field, msg):
+        errors = form.errors
+        errors_list = errors[field]
+        self.assertListEqual([msg], errors_list)
+
     def make_validated_form(self, **kwargs):
         valid = dict(name="Henrique Bastos", cpf='12345678901',
                     email='henrique@bastos.net', phone='21-99618-6180')
