@@ -2,7 +2,6 @@ from django.test import TestCase
 from django.shortcuts import resolve_url as r
 
 from eventex.core.models import Talk, Speaker, Course
-from unittest import skip
 
 
 class TalkListGet(TestCase):
